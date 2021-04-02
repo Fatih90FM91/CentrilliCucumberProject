@@ -5,7 +5,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Login as a Driver",
+  "name": "Login as a sales manager",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -15,7 +15,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "the user is on the page",
+  "name": "the user is on the  webpage",
   "keyword": "Given "
 });
 formatter.match({});
@@ -23,7 +23,7 @@ formatter.result({
   "status": "undefined"
 });
 formatter.step({
-  "name": "the user enters the driver information",
+  "name": "the user enters the sales manager information",
   "keyword": "Then "
 });
 formatter.match({});

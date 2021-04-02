@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-27T13:59:23.686Z",
+        "start_timestamp": "2021-04-02T17:27:09.681Z",
         "line": 3,
-        "name": "Login as a Driver",
+        "name": "Login as a sales manager",
         "description": "",
-        "id": "users-should-be-able-to-login;login-as-a-driver",
+        "id": "users-should-be-able-to-login;login-as-a-sales-manager",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -16,7 +16,7 @@
               "status": "undefined"
             },
             "line": 4,
-            "name": "the user is on the page",
+            "name": "the user is on the  webpage",
             "match": {},
             "keyword": "Given "
           },
@@ -25,7 +25,7 @@
               "status": "undefined"
             },
             "line": 5,
-            "name": "the user enters the driver information",
+            "name": "the user enters the sales manager information",
             "match": {},
             "keyword": "Then "
           },
