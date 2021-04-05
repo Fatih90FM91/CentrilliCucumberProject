@@ -26,6 +26,10 @@ public class LoginPage {
     public WebElement submit;
 
 
+    @FindBy(xpath = "//span[@class='oe_topbar_name']")
+    public WebElement userNameOnPage;
+
+
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);

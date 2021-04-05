@@ -28,7 +28,7 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
-                  //  driver.manage().window().maximize();
+                    driver.manage().window().maximize();
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
@@ -71,7 +71,7 @@ public class Driver {
 
     public static void closeDriver() {
         if (driver != null) {
-            //  driver.quit();
+            // driver.quit();
             driver = null;
         }
     }
