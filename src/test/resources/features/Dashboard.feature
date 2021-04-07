@@ -10,3 +10,11 @@ Feature: Dashboard functionality
 
 
 
+ Scenario: Dropdown List
+   When user should be able to see dropdown list
+   Then In dropdown list should be these
+   |Documentation|
+   |Support      |
+   |Preferences  |
+   |My Odoo.com account|
+   |Log out            |

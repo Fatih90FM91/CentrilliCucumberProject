@@ -18,7 +18,7 @@ public class DashBoardPage {
         PageFactory.initElements(Driver.get(),this);
     }
 
-    @FindBy(xpath = "//li[@style='display: block;']")
+    @FindBy(xpath = "//ul[@role='menu']/li/a")
     public List<WebElement> dashboardList;
 
 

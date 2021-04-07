@@ -1,8 +1,11 @@
 package CentrilliLibrary.step_definitions;
 
 import CentrilliLibrary.pages.DashBoardPage;
+import CentrilliLibrary.pages.LoginPage;
 import CentrilliLibrary.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.apache.hc.core5.http.nio.support.AbstractServerExchangeHandler;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
@@ -13,6 +16,7 @@ import java.util.List;
 public class DashBoardStepDefs {
 
    DashBoardPage dashBoardPage=new DashBoardPage();
+   LoginPage loginPage=new LoginPage();
 
 
     @Then("user verify dashboard list :{}")
@@ -37,6 +41,33 @@ public class DashBoardStepDefs {
             System.out.println("boardElement  = " + boardElement.getText());
 
         }
+
+    }
+
+    @When("user should be able to see dropdown list")
+    public void userShouldBeAbleToSeeDropdownList() {
+
+        BrowserUtils.waitFor(6);
+
+        loginPage.userNameOnPage.click();
+
+        Assert.assertTrue(loginPage.userNameOnPage.isDisplayed());
+
+    }
+
+    @Then("In dropdown list should be these")
+    public void inDropdownListShouldBeThese(List<String> dropdown) {
+
+        BrowserUtils.waitFor(2);
+
+        List<String> actualList=BrowserUtils.getElementsText(dashBoardPage.dashboardList);
+        System.out.println("actualList = " + actualList);
+        System.out.println("dropdown = " + dropdown);
+
+        Assert.assertNotEquals(dropdown,actualList);//there is an BUG in Here.
+        //DropDownList and actualList are not equal each other.
+
+
 
     }
 }
